@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      .br {
-        border: 2px solid blue;
-        width: 400px;
-        height: 300px;
-        padding-top: 50px;
-      }
+        .Container, .Container1 {
+            border: 5px solid black;
+            width: 80%;     
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        input{
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        button{
+            width: 20%;
+            padding: 5px;
+            margin: 5px 0;
+
+        }
+        @media screen and (min-width: 768px) {
+            .Container, .Container1 {
+                width: 40%;
+            }
+        }
     </style>
-  </head>
-  <body>
-      <center>
-        <h1 style="color: red;">Log in your accout</h1>
-        <form class="br">
-          <input type="text" placeholder="First name">
-          <br>
-          <br>
-          <input type="text" placeholder="Last name">
-          <br>
-          <br>
-          <input type="date" placeholder="Date of birth">
-          <br>
-          <br>
-          <label for="Nma"></label>
-          Male
-          <input type="radio" name="Nma">
-          Female
-          <input type="radio" name="Nma">
-          Other
-          <input type="radio" name="Nma">
-          <br>
-          <br>
-          <input type="submit">
-        </form>
-      </center>  
-  </body>
+</head>
+
+<body>
+    <center>
+        <div class="Container">
+            <h1>Sign up your account</h1>
+            <input type="text" id="1n" placeholder="Enter your 1st name">
+            <input type="text" id="2n" placeholder="Enter your 2nd name">
+            <input type="email" id="Ema" placeholder="Enter your Email">
+            <input type="password" id="Pw" placeholder="Enter your Password">
+            <button onclick="signUp()">Sign Up</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="Container1">
+            <h1>Already have an account? Sign in</h1>
+            <input type="email" id="Em" placeholder="Enter your Email">
+            <input type="password" id="Pwd" placeholder="Enter your Password">
+            <button onclick="signIn()">Sign In</button>
+        </div>
+    </center>
+    <script src="js.js"></script>
+</body>
+
 </html>
